@@ -29,20 +29,14 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 
 <h2>Lifecycle Stages</h2>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<h2>1. Ticket Creation / Intake:</h2>
+In the initial stage, tickets were created by end users when issues arose. I submitted tickets that described various problems such as the entire mobile/online banking system being down, the accounting department needing an Adobe upgrade, and the CFO’s laptop failing to power on. Each ticket was entered through the web form, automatically capturing essential details like the issue description and submission time, thereby initiating the support process.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+<h2>2. Ticket Processing / Assignment:</h2>
+Once the tickets were created, I, acting as a help desk agent, reviewed each ticket’s properties examining the priority, department, SLA, and assignee. I updated the tickets accordingly: for instance, I set the first ticket to Sev-A with a 1-hour response requirement and assigned it to the Online Banking Department, while I adjusted the second and third tickets to Sev-B with a 4-hour SLA, assigning them to Support. During this stage, some tickets were escalated, which even affected access permissions, and I had to adjust administrative settings to regain visibility.
+
+<h2>3. Ticket Resolution / Closure:</h2>
+In the final stage, I worked the tickets to completion. This involved addressing the reported issues until they were fully resolved. I either resolved the tickets myself or had another agent complete the resolution ensuring that every update triggered an email notification to the end user. Once the issues were fixed, the tickets were closed, thus finalizing the support process and ensuring proper documentation for future reference.
 <br />
 
 <p>
