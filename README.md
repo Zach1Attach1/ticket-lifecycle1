@@ -1,42 +1,129 @@
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
-</p>
+# osTicket: Ticket Lifecycle Examples
 
-<h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
-This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket.<br />
+## Project Overview
+This project demonstrates the complete lifecycle of support tickets in osTicket, from creation to resolution, showcasing how the help desk system works in a simulated environment.
 
+## Environments and Technologies Used
+- Microsoft Azure (Virtual Machine)
+- Windows 10
+- osTicket (Help Desk Ticketing System)
 
-<h2>Video Demonstration</h2>
+## Prerequisites
+- osTicket fully installed and configured
+- Agents, departments, SLAs, and help topics set up
 
-- ### [YouTube: How to create, work, and resolves tickets within osTicket](https://www.youtube.com)
+## Ticket Lifecycle Demonstrations
 
-<h2>Environments and Technologies Used</h2>
+### Ticket Example 1: Critical System Outage
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+#### 1. Ticket Creation (End-User Perspective)
+- Accessed the end-user portal at http://localhost/osTicket/
+- Created a ticket with the following details:
+  - Topic: Business Critical Outage
+  - Issue Summary: "Entire mobile/online banking system is down"
+  - Details: "Customers are reporting they cannot access their accounts online or through the mobile app. This is affecting all users."
 
-<h2>Operating Systems Used </h2>
+![Ticket Creation](https://i.imgur.com/7uZnYHf.png)
 
-- Windows 10</b> (21H2)
+#### 2. Initial Ticket Properties (Help Desk Agent Perspective)
+- Logged in as Agent John
+- Observed the ticket's initial properties:
+  - Default priority
+  - Assigned to general department
+  - No SLA assigned yet
+  - Unassigned status
 
-<h2>Ticket Lifecycle Stages</h2>
+![Initial Properties](https://i.imgur.com/tbxRLnz.png)
 
-- Intake
-- Assignment and Communication
-- Working the Issue
-- Resolution
+#### 3. Ticket Triage
+- Set the following properties to properly categorize the issue:
+  - Severity: Sev-A (1 hour, 24/7)
+  - Department: Online Banking
+  - Assigned to Jane (SysAdmin)
+- Added an internal note documenting the triage decision
 
-<h2>Lifecycle Stages</h2>
+![Ticket Triage](https://i.imgur.com/JqFhDQC.png)
 
-<h2>1. Ticket Creation / Intake:</h2>
-In the initial stage, tickets were created by end users when issues arose. I submitted tickets that described various problems such as the entire mobile/online banking system being down, the accounting department needing an Adobe upgrade, and the CFO’s laptop failing to power on. Each ticket was entered through the web form, automatically capturing essential details like the issue description and submission time, thereby initiating the support process.
+#### 4. Testing Department Access Restrictions
+- Logged out and logged back in as John
+- Attempted to view the ticket (now unable to access due to department restrictions)
+- Confirmed department-based access control is working correctly
 
-<h2>2. Ticket Processing / Assignment:</h2>
-Once the tickets were created, I, acting as a help desk agent, reviewed each ticket’s properties examining the priority, department, SLA, and assignee. I updated the tickets accordingly: for instance, I set the first ticket to Sev-A with a 1-hour response requirement and assigned it to the Online Banking Department, while I adjusted the second and third tickets to Sev-B with a 4-hour SLA, assigning them to Support. During this stage, some tickets were escalated, which even affected access permissions, and I had to adjust administrative settings to regain visibility.
+#### 5. Ticket Resolution
+- Logged in as Jane (SysAdmin)
+- Added updates as the issue was investigated:
+  - Internal note: "Investigating database connectivity issues"
+  - Response to customer: "We are aware of the outage and working to resolve it"
+  - Update: "Database server restarted, testing connectivity"
+- Resolved the ticket with final response:
+  - "The banking system has been restored. A database connection pool was exhausted and has been expanded to prevent future occurrences."
+- Changed ticket status to "Resolved"
 
-<h2>3. Ticket Resolution / Closure:</h2>
-In the final stage, I worked the tickets to completion. This involved addressing the reported issues until they were fully resolved. I either resolved the tickets myself or had another agent complete the resolution ensuring that every update triggered an email notification to the end user. Once the issues were fixed, the tickets were closed, thus finalizing the support process and ensuring proper documentation for future reference.
-<br />
+![Ticket Resolution](https://i.imgur.com/UCtXqCx.png)
 
-<p>
+### Ticket Example 2: Software Upgrade
+
+#### 1. Ticket Creation
+- Created a new ticket as end-user:
+  - Topic: Personal Computer Issues
+  - Issue: "Accounting department needs Adobe upgrade, broken"
+  - Details: "The Adobe software in the accounting department is outdated and causing files to be unreadable."
+
+#### 2. Ticket Triage
+- Logged in as Agent John
+- Set properties:
+  - Severity: Sev-B (4 hours, 24/7)
+  - Department: Support
+  - Assigned to self (John)
+
+#### 3. Ticket Resolution
+- Added investigation notes
+- Responded to customer with updates
+- Documented solution implementation
+- Closed ticket with resolution details
+
+### Ticket Example 3: Hardware Issue
+
+#### 1. Ticket Creation
+- Created a new ticket as end-user:
+  - Topic: Equipment Request
+  - Issue: "CFO's laptop will no longer turn on"
+  - Details: "CFO's laptop won't power on at all, even when plugged in."
+
+#### 2. Ticket Triage
+- Logged in as Agent John
+- Set properties:
+  - Severity: Sev-B (4 hours, 24/7)
+  - Department: Support
+  - Assigned to self (John)
+
+#### 3. Ticket Resolution
+- Documented troubleshooting steps
+- Created equipment replacement request
+- Updated ticket with resolution
+- Closed ticket after confirming CFO received new laptop
+
+### Department Escalation Demonstration
+
+#### 1. Testing Department-Based Access
+- Set all tickets to SysAdmins with Sev-A priority
+- Observed that some tickets became inaccessible to certain agents
+- Switched to admin panel to modify access rights
+- Assigned view-access to SysAdmins department for testing purposes
+- Confirmed ability to see but not modify escalated tickets
+
+![Department Access Control](https://i.imgur.com/d8LVpVJ.png)
+
+## Ticket Management Best Practices
+- Created tickets for all support interactions, even quick fixes
+- Used consistent documentation in ticket updates
+- Leveraged internal notes for team communication
+- Maintained appropriate SLA assignments
+- Demonstrated proper ticket closure procedures
+
+## Lessons Learned
+- The importance of proper ticket categorization for response prioritization
+- How access controls affect ticket visibility across departments
+- The value of detailed documentation throughout the ticket lifecycle
+- SLA impact on ticket handling and prioritization
+- The different perspectives of end-users versus help desk agents
