@@ -98,6 +98,7 @@ This project demonstrates the complete lifecycle of support tickets in osTicket,
 - Created equipment replacement request
 - Updated ticket with resolution
 - Closed ticket after confirming CFO received new laptop
+![Ticket Resolution](https://github.com/Zach1Attach1/Images-folder/blob/main/Screenshot%202025-04-14%20160613.png?raw=true)
 
 ## Ticket Management Best Practices
 - Created tickets for all support interactions, even quick fixes
